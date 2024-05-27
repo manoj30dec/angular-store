@@ -1,0 +1,11 @@
+<!-- Exmple of custom directive -->
+<!-- <h3 [highlight]>User Name = {{name | uppercase }}</h3> -->
+<h3 #heading>User Name = {{name | uppercase }}</h3>
+<p>Is Employed = {{isEmpployed}}</p>
+<p>Age = {{age}}</p>
+<p>phone = {{phoneNumber | countrycode}}</p>
+<p>phone = {{phoneNumber | countrycode : "+65 - "}}</p>
+<!-- <input type="text" [value]="age" (input)="onChange($event)"> -->
+<input type="text" [(ngModel)]="age">
+<br /><br />
+<button (click)="sendData()">Send to Parent</button>

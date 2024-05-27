@@ -1,0 +1,22 @@
+@keyframes isAvailable {
+    0% {
+        background-color: yellowgreen;
+    }
+    // 50% {
+    //     background-color: rgb(198, 207, 179);
+    // }
+    100% {
+        background-color: transparent;
+    }
+}
+
+:host{
+    animation: 2s ease-out isAvailable;
+    display: block;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 16px;
+}
+:host:focus-visible{
+    background-color: transparent;
+}

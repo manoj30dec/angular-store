@@ -1,0 +1,15 @@
+<h1>Best Seller Products</h1>
+<br/>
+
+
+  <hr/>
+  <h4>Working of Input and Output</h4>
+  <h2 *ngIf="newAge">Received Age In Parent =  {{newAge}}</h2>
+  <normal-input [userName]="'Manoj Kumar'" [isEmpployed]="'true'" age="32" (myEvent)="receivedFromInput($event)" /> 
+  <normal-input [userName]="'Hanish Bhardwaj'"  [isEmpployed]="true"  age="29" (myEvent)="receivedFromInput($event)" /> 
+  <normal-input [userName]="'Muskan Mehta'" [isEmpployed]="false"  [age]="28" (myEvent)="receivedFromInput($event)" *ngIf="isAvaialble" class="launch" />
+
+  <div style="margin: 16px 16px 35px">
+    <button (click)="destroy()" style="background-color: black; color: white; padding: 16px; border-radius: 8px;">Destroy Users</button>
+  </div>
+ 
