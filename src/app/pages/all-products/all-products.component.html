@@ -4,13 +4,9 @@
 <ul class="product-container">
     @for (item of allProducts; track $index) {
         <li>
-          <div class="card">
+          <a [routerLink]="'/product-detail/'+item.id" class="card">
             <h6>{{item.title}}</h6>
-            <!-- <figure class="card-img-top">
-              <img [src]="item.image"  alt="...">
-            </figure> -->
             <img [src]="item.image"  alt="..." class="card-img-top">
-            
             <div class="card-body">
               <p class="card-text">
                 {{item.description}}
@@ -19,7 +15,7 @@
                 {{item.price | currency:"Rs."}}
               </div>
             </div>
-          </div>
+          </a>
         </li>
     }
 </ul>

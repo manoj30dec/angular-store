@@ -1,1 +1,4 @@
-<p>product-detail works!</p>
+<h1>Product Title:{{productData.title}}</h1>
+<img [src]="productData.image" [alt]="productData.title" class="img-responsive" />
+<p>{{productData.description}}</p>
+<p>{{productData.price | currency:"Rs. "}}</p>

@@ -11,12 +11,16 @@ import { TwoWayDataBindingComponent } from './pages/two-way-data-binding/two-way
 export const routes: Routes = [
     { path:  'login', component:  LoginComponent, title:"Login"},
     { path:  'home', component:  HomeComponent, title:"Home"},
-    // { path:  'all-products', component:  AllProductsComponent, title:"Product List"},
-    { path:  'all-products', loadComponent:()=> import('./pages/all-products/all-products.component').then((c)=>c.AllProductsComponent) },
-    { path:  'product-detail', component:  ProductDetailComponent, title:"Product Detail"},
-    { path:  'two-way-data-binding-example', component:  TwoWayDataBindingComponent, title:"Two Way Data Binding Example"},
-    // { path:  'angular-signals', component:  SignalInputComponent, title:"Angular Signals Example"},
 
+    // Example of lazy loading
+    // { path:  'all-products', component:  AllProductsComponent, title:"Product List"},
+    // { path:  'product-detail', component:  ProductDetailComponent, title:"Product Detail"},
+    { path:  'all-products', loadComponent:()=> import('./pages/all-products/all-products.component').then((c)=>c.AllProductsComponent) },
+    { path:  'product-detail/:id', loadComponent:()=> import('./pages/product-detail/product-detail.component').then((c)=>c.ProductDetailComponent) },
+    { path:  'two-way-data-binding-example', component:  TwoWayDataBindingComponent, title:"Two Way Data Binding Example"},
+
+    // Example of nested routing
+    // { path:  'angular-signals', component:  SignalInputComponent, title:"Angular Signals Example"},
     // { path:  'angular-signals', loadChildren:()=> import('./pages/signal-input/signals.routes').then((r)=>r.signalRoutes) }, //method one
     { path:  'angular-signals', loadChildren:()=> import('./pages/signal-input/signals.routes') }, //method two
 

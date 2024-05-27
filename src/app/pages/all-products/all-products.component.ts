@@ -3,11 +3,12 @@ import { HttpService } from '../../services/http.service';
 import { ProductModel } from '../../models/products.models';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'all-products',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './all-products.component.html',
   styleUrl: './all-products.component.scss'
 })
