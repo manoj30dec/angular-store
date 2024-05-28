@@ -40,6 +40,7 @@ export class AppComponent implements OnChanges, OnInit {
     {pageName:"Global State management using service", routePath:"/global-statemanagement"},
     {pageName:"Angular Signals", routePath:"/angular-signals"},
     {pageName:"Users", routePath:"/users"},
+    {pageName:"Contact Us", routePath:"/contact-us"},
     {pageName:"Login", routePath:"/login"},
   ]
   

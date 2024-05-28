@@ -1,1 +1,37 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="login($event)">
+  <h4>Please login</h4>
+  <div style="margin-top: 10px;">
+    <label for="email">
+        Email
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Type your email"
+          [formControl]="email"
+        />
+      </label>
+      <div class="hint-text" [hidden]="email.valid || email.untouched">Please enter valid email address</div>
+
+  </div>
+  <div style="margin-top: 10px;">
+    <label for="password">
+        Password
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Type your password"
+          [formControl]="password"
+        />
+      </label>
+      <div class="hint-text" [hidden]="password.valid || password.untouched">Please enter password with minimum 6 charactor</div>
+  </div>
+  <div style="margin-top: 10px;">
+    <button type="submit" style="margin-right: 10px;" [disabled]="loginForm.invalid">Submit</button>
+    <button (click)="reset()">Reset</button>
+    <a [routerLink]="'/signup'">Sign Up</a>
+  </div>
+  
+</form>
+

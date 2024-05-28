@@ -8,9 +8,12 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { TwoWayDataBindingComponent } from './pages/two-way-data-binding/two-way-data-binding.component';
 import { GlobalStaemanagementComponent } from './pages/global-staemanagement/global-staemanagement.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 export const routes: Routes = [
     { path:  'login', component:  LoginComponent, title:"Login"},
+    { path:  'signup', component:  SignupComponent, title:"Sign Up"},
     { path:  'home', component:  HomeComponent, title:"Home"},
 
     // Example of lazy loading
@@ -25,6 +28,7 @@ export const routes: Routes = [
     // { path:  'angular-signals', loadChildren:()=> import('./pages/signal-input/signals.routes').then((r)=>r.signalRoutes) }, //method one
     { path:  'angular-signals', loadChildren:()=> import('./pages/signal-input/signals.routes') }, //method two
 
+    { path:  'contact-us', component:  ContactUsComponent, title:"Contact us"},
     { path:  'users', component:  UsersComponent, title:"Users"},
     { path:  'global-statemanagement', component:  GlobalStaemanagementComponent, title:"State management using service"},
     { path: '',   redirectTo: '/login', pathMatch: 'full' },

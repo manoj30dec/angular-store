@@ -1,0 +1,43 @@
+<form #registerForm="ngForm">
+    <h4>Please Signup</h4>
+    <div style="margin-top: 10px;">
+      <label for="email">
+          Email
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Type your email"
+            required
+            pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+            ngModel
+            #email="ngModel"
+          />
+        </label>
+        <div class="hint-text" [hidden]="email.valid || email.untouched">Please enter valid email address</div>
+  
+    </div>
+    <div style="margin-top: 10px;">
+      <label for="password">
+          Password
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Type your password"
+            required
+            minlength="6"
+            ngModel
+            #password="ngModel"
+          />
+        </label>
+        <div class="hint-text" [hidden]="password.valid || password.untouched">Please enter password with minimum 6 charactor</div>
+    </div>
+    <div style="margin-top: 10px;">
+      <button type="submit" style="margin-right: 10px;" (click)="register(registerForm)" >Register</button>
+      <button (click)="reset(registerForm)">Reset</button>
+    </div>
+    
+  </form>
+  
+  
