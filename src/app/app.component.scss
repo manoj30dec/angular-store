@@ -1,0 +1,9 @@
+@mixin fontSize($val) {
+    @debug calc($val/1px);
+    $rem : calc(calc($val/1px)/16);
+    @debug $rem;
+    font-size:$rem+rem;
+  }
+  .myFont{
+    @include fontSize(48px);  
+  }

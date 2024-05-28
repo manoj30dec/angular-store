@@ -35,7 +35,7 @@ export class AppComponent implements OnChanges, OnInit {
     // "Home","All Products","Product Detail", "Users"
     {pageName:"Home", routePath:"/home"},
     {pageName:"All Products", routePath:"/all-products"},
-    {pageName:"Product Detail", routePath:"/product-detail"},
+    // {pageName:"Product Detail", routePath:"/product-detail"},
     {pageName:"Example of two way data binding", routePath:"/two-way-data-binding-example"},
     {pageName:"Global State management using service", routePath:"/global-statemanagement"},
     {pageName:"Angular Signals", routePath:"/angular-signals"},
