@@ -32,7 +32,6 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       this.postSubscription = this.httpService.httpGet(this.endPoint + id).subscribe((data)=>{
         this.productData = data
         this.isLoaded = false;
-        console.log(this.productData)
       })
       console.log("executed")
     }

@@ -3,4 +3,14 @@
     <li><a [routerLink]="'/angular-signals/input-signal'">Input Signals</a></li>
     <li><a [routerLink]="'/angular-signals/signal-quries'">Signal Queries</a></li>
 </ul>
+<h4>Signal Counter</h4>
+<p>{{signalCounter.getCounter()}}</p>
+<button (click)="signalCounter.incrementCounter()">Increment Signal</button>
+<hr/>
+<h4>Read Only Signal:Double Count</h4>
+<p>{{signalCounter.doubleCount()}}</p>
+<hr />
+<input-signal [username]="'Value send by parent'"></input-signal>
+
 <router-outlet />
+

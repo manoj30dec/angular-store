@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
+
 
 @Component({
   selector: 'input-signal',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
   templateUrl: './input-signal.component.html',
   styleUrl: './input-signal.component.scss'
 })
-export class InputSignalComponent {
-
+export class InputSignalComponent  {
+ username=input("Default User Input = Manoj");
+ ngOnInit(): void {
+   
+ }
 }

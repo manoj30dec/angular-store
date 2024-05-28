@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 // import { AllProductsComponent } from './pages/all-products/all-products.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { TwoWayDataBindingComponent } from './pages/two-way-data-binding/two-way-data-binding.component';
+import { GlobalStaemanagementComponent } from './pages/global-staemanagement/global-staemanagement.component';
 
 export const routes: Routes = [
     { path:  'login', component:  LoginComponent, title:"Login"},
@@ -25,6 +26,7 @@ export const routes: Routes = [
     { path:  'angular-signals', loadChildren:()=> import('./pages/signal-input/signals.routes') }, //method two
 
     { path:  'users', component:  UsersComponent, title:"Users"},
+    { path:  'global-statemanagement', component:  GlobalStaemanagementComponent, title:"State management using service"},
     { path: '',   redirectTo: '/login', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }, 
 ];

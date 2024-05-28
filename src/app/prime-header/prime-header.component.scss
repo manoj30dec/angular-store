@@ -2,3 +2,6 @@
     background-color: tomato !important;
 }
 .navbar-expand-lg .navbar-nav .nav-link{color: white;}
+.navbar-expand-lg .navbar-nav .nav-link.active{
+    background-color: brown;
+}
