@@ -1,0 +1,102 @@
+@import 'variables';
+@mixin font-size($val-in-pixel:16px){
+    font-size:$val-in-pixel/$base-font-size * 1rem ;
+}
+@mixin rem-converter($a:0, $b:0, $c:0, $d:0){
+    $top: calc($a/$base-font-size * 1rem); 
+    $right: calc($b/$base-font-size * 1rem); 
+    $bottom: calc($c/$base-font-size * 1rem); 
+    $left: calc($d/$base-font-size * 1rem);
+}
+@function rem-converter($top:0, $right:0, $bottom:0, $left:0){
+    @if($top==0){
+        $top:0;
+    }@else{
+        $top: $top/$base-font-size * 1rem; 
+    }
+    @if($right==0){
+        $right:0;
+    }@else{
+        $right: $right/$base-font-size * 1rem; 
+    }
+    @if($bottom==0){
+        $bottom:0;
+    }@else{
+        $bottom: $bottom/$base-font-size * 1rem; 
+    }
+    @if($left==0){
+        $left:0;
+    }@else{
+        $left: $left/$base-font-size * 1rem; 
+    }
+    @return $top $right $bottom $left; 
+}
+@mixin border-radius($top-in-px:0, $right-in-px:0, $bottom-in-px:0, $left-in-px:0){
+    @if($top-in-px==0){
+        $top-in-px:0;
+    }@else {
+        $top-in-px:$top-in-px/$base-font-size * 1rem;
+    } 
+    @if($right-in-px==0){
+        $right-in-px:0;
+    }@else {
+        $right-in-px:$right-in-px/$base-font-size * 1rem; 
+    }
+    @if($bottom-in-px==0){
+        $bottom-in-px:0;
+    }@else {
+        $bottom-in-px:$bottom-in-px/$base-font-size * 1rem; 
+    }
+    @if($left-in-px==0){
+        $left-in-px:0;
+    }@else {
+        $left-in-px:$left-in-px/$base-font-size * 1rem; 
+    }   
+    border-radius: $top-in-px $right-in-px $bottom-in-px $left-in-px;
+}
+@mixin padding($top-in-px:0, $right-in-px:0, $bottom-in-px:0, $left-in-px:0){
+    @if($top-in-px==0){
+        $top-in-px:0;
+    }@else {
+        $top-in-px:$top-in-px/$base-font-size * 1rem;
+    } 
+    @if($right-in-px==0){
+        $right-in-px:0;
+    }@else {
+        $right-in-px:$right-in-px/$base-font-size * 1rem; 
+    }
+    @if($bottom-in-px==0){
+        $bottom-in-px:0;
+    }@else {
+        $bottom-in-px:$bottom-in-px/$base-font-size * 1rem; 
+    }
+    @if($left-in-px==0){
+        $left-in-px:0;
+    }@else {
+        $left-in-px:$left-in-px/$base-font-size * 1rem; 
+    }   
+    padding: $top-in-px $right-in-px $bottom-in-px $left-in-px;
+}
+@mixin margin($top-in-px:0, $right-in-px:0, $bottom-in-px:0, $left-in-px:0){
+    @if($top-in-px==0){
+        $top-in-px:0;
+    }@else {
+        $top-in-px:$top-in-px/$base-font-size * 1rem;
+    } 
+    @if($right-in-px==0){
+        $right-in-px:0;
+    }@else {
+        $right-in-px:$right-in-px/$base-font-size * 1rem; 
+    }
+    @if($bottom-in-px==0){
+        $bottom-in-px:0;
+    }@else {
+        $bottom-in-px:$bottom-in-px/$base-font-size * 1rem; 
+    }
+    @if($left-in-px==0){
+        $left-in-px:0;
+    }@else {
+        $left-in-px:$left-in-px/$base-font-size * 1rem; 
+    }   
+    margin: $top-in-px $right-in-px $bottom-in-px $left-in-px;
+}
