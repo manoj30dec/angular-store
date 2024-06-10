@@ -1,8 +1,8 @@
 <form [formGroup]="loginForm" (ngSubmit)="login($event)">
-  <h4>Please login</h4>
+  <h4>Please login <span style="font-size: 12px; color: tomato;">(Example of Reactive form Validation)</span></h4>
   <div style="margin-top: 10px;">
     <label for="email">
-        Email
+        Email <span style="font-size: 12px; color: tomato;">(Just to show validation on email)</span>
         <input
           type="email"
           name="email"
@@ -12,7 +12,19 @@
         />
       </label>
       <div class="hint-text" [hidden]="email.valid || email.untouched">Please enter valid email address</div>
-
+  </div>
+  <div style="margin-top: 10px;">
+    <label for="email">
+        Username
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Type your user name"
+          [formControl]="username"
+        />
+      </label>
+      <div class="hint-text" [hidden]="username.valid || username.untouched">Please enter username</div>
   </div>
   <div style="margin-top: 10px;">
     <label for="password">
@@ -30,7 +42,7 @@
   <div style="margin-top: 10px;">
     <button type="submit" style="margin-right: 10px;" [disabled]="loginForm.invalid">Submit</button>
     <button (click)="reset()">Reset</button>
-    <a [routerLink]="'/signup'">Sign Up</a>
+    <a [routerLink]="'/signup'" style="margin-left: 10px;">Sign Up</a>
   </div>
   
 </form>

@@ -13,5 +13,8 @@ export class HttpService {
    httpGet(url:string){
     return this.http.get(url)
    }
+   httpPost(url:string, body:any={}, options:any={}){
+    return this.http.post(url,body, options)
+   }
 
 }

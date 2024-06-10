@@ -1,7 +1,8 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
-import { BrowserModule, Title } from '@angular/platform-browser';
+import { CommonModule, } from '@angular/common';
+import { Component, Input, OnInit, } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { IsLoggedInService } from '../services/is-logged-in.service';
 
 @Component({
   selector: 'prime-header',
@@ -17,7 +18,7 @@ export class PrimeHeaderComponent implements OnInit {
   // menuItem = input<any[]>();
   @Input() menuItem:any = 'Home';
   @Input({required: true}) value = 0;
-  constructor(private title:Title){
+  constructor(private title:Title, private isLoggedIn:IsLoggedInService){
     console.log(this.menuItem)
     console.log(this.value)
   }
@@ -27,6 +28,12 @@ export class PrimeHeaderComponent implements OnInit {
     // console.log(this.title.getTitle())
     // console.log(this.title.setTitle("Headers"))
     // console.log(this.menuItem)
+  }
+  logout():void{
+    debugger;
+    if(this.isLoggedIn.isLoggedIn()){
+      this.isLoggedIn.logout()
+    }
   }
   
 }

@@ -34,8 +34,9 @@
         <div class="hint-text" [hidden]="password.valid || password.untouched">Please enter password with minimum 6 charactor</div>
     </div>
     <div style="margin-top: 10px;">
-      <button type="submit" style="margin-right: 10px;" (click)="register(registerForm)" >Register</button>
-      <button (click)="reset(registerForm)">Reset</button>
+      <button class="btn btn-primary" type="submit" style="margin-right: 10px;" (click)="register(registerForm)" >Register</button>
+      <button class="btn btn-secondary" (click)="reset(registerForm)">Reset</button>
+      <a [routerLink]="'/login'" class="btn btn-secondary" style="margin-left: 10px;">Back to Login</a>
     </div>
     
   </form>

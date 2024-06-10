@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { UsersComponent } from './pages/users/users.component';
 import { CommonModule } from '@angular/common';
 import { PrimeHeaderComponent } from './prime-header/prime-header.component';
+import { IsLoggedInService } from './services/is-logged-in.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,7 @@ import { PrimeHeaderComponent } from './prime-header/prime-header.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnChanges, OnInit {
-  constructor(){
+  constructor(public isLoggedIn:IsLoggedInService){
   }
   ngOnInit(): void {
 
@@ -41,7 +42,8 @@ export class AppComponent implements OnChanges, OnInit {
     {pageName:"Angular Signals", routePath:"/angular-signals"},
     {pageName:"Users", routePath:"/users"},
     {pageName:"Contact Us", routePath:"/contact-us"},
-    {pageName:"Login", routePath:"/login"},
+    // {pageName:"Login", routePath:"/login"},
+    {pageName:"Admin", routePath:"/admin"},
   ]
   
 
