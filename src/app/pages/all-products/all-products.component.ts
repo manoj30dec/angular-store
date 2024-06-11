@@ -4,7 +4,18 @@ import { ProductModel } from '../../models/products.models';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-
+interface productType{
+  id: number,
+  title: string,
+  price: number,
+  description:string,
+  category: string,
+  image: string,
+  rating: {
+      rate: number,
+      count: number
+  }
+}
 @Component({
   selector: 'all-products',
   standalone: true,

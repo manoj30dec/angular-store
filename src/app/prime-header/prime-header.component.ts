@@ -30,7 +30,6 @@ export class PrimeHeaderComponent implements OnInit {
     // console.log(this.menuItem)
   }
   logout():void{
-    debugger;
     if(this.isLoggedIn.isLoggedIn()){
       this.isLoggedIn.logout()
     }

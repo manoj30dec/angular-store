@@ -1,0 +1,16 @@
+@if(categories.length){
+    <select class="form-select" aria-label="Default select example">
+        <option selected>SELECT</option>
+        @for (item of categories; track $index){
+            <option [value]="item">{{item.toUpperCase()}}</option>
+        }
+    </select>
+}
+
+<!-- <form [formGroup]="loginForm" (ngSubmit)="addNewProduct()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+</form> -->
