@@ -2,7 +2,7 @@ import { CommonModule, } from '@angular/common';
 import { Component, Input, OnInit, } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { IsLoggedInService } from '../services/is-logged-in.service';
+import { IsLoggedInService } from '../../services/is-logged-in.service';
 
 @Component({
   selector: 'prime-header',

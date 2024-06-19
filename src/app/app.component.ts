@@ -2,8 +2,9 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UsersComponent } from './pages/users/users.component';
 import { CommonModule } from '@angular/common';
-import { PrimeHeaderComponent } from './prime-header/prime-header.component';
+import { PrimeHeaderComponent } from './components/prime-header/prime-header.component';
 import { IsLoggedInService } from './services/is-logged-in.service';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ import { IsLoggedInService } from './services/is-logged-in.service';
     CommonModule,
     UsersComponent, 
     PrimeHeaderComponent,
-    
+    SideBarComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

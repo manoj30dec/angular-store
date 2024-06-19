@@ -1,0 +1,26 @@
+<div class="list-group">
+    <a [routerLink]="'/output-function'" [routerLinkActive]="'active'" class="list-group-item list-group-item-action" aria-current="true">
+      Output Function Example
+    </a>
+    <a [routerLink]="'/hooks'" [routerLinkActive]="'active'" class="list-group-item list-group-item-action" aria-current="true">
+      Life Cycle Hooks
+      <div class="list-group child-list">
+         
+          <a [routerLink]="'/hooks'" onclick="JavaScript:event.stopPropagation();" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            ngOnInit
+          </a>
+          <a [routerLink]="'hooks/on-changes'" onclick="JavaScript:event.stopPropagation();" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            ngOnChanges
+          </a>
+
+          <a [routerLink]="'hooks/on-destroy'" onclick="JavaScript:event.stopPropagation();" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            ngOnDestroy
+          </a>
+
+          <a [routerLink]="'hooks/on-do-check'" onclick="JavaScript:event.stopPropagation();" [routerLinkActive]="'active'"  class="list-group-item list-group-item-action">
+            ngOnDoCheck
+          </a>
+        
+      </div>
+    </a>
+</div>

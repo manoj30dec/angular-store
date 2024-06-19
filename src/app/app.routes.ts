@@ -13,6 +13,9 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { authGuard } from './services/auth.guard';
 import { confirmLeaveGuard } from './services/confirm-leave.guard';
+import { OutputParentComponent } from './pages/output-parent/output-parent.component';
+import { HooksComponent } from './pages/hooks/hooks.component';
+import { routesHooks } from './pages/hooks/hooks.routes';
 
 export const routes: Routes = [
     { path:  'login', component:  LoginComponent, title:"Login"},
@@ -35,6 +38,12 @@ export const routes: Routes = [
     { path:  'users', component:  UsersComponent, title:"Users", canActivate:[authGuard]},
     { path:  'admin', component:  AdminComponent, title:"Admin", canActivate:[authGuard] },
     { path:  'global-statemanagement', component:  GlobalStaemanagementComponent, title:"State management using service"},
+    { path:  'output-function', component:  OutputParentComponent, title:"Output function example"},
+    { path:  'hooks', component:  HooksComponent, title:"Life cycle hooks examples", children:routesHooks},
+    // { 
+    //     path:  'on-init', 
+    //     loadChildren:OnInitComponent 
+    // },
     { path: '',   redirectTo: '/login', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent }, 
 ];
