@@ -19,8 +19,8 @@ export class PrimeHeaderComponent implements OnInit {
   @Input() menuItem:any = 'Home';
   @Input({required: true}) value = 0;
   constructor(private title:Title, private isLoggedIn:IsLoggedInService){
-    console.log(this.menuItem)
-    console.log(this.value)
+    // console.log(this.menuItem)
+    // console.log(this.value)
   }
   
   ngOnInit(): void {

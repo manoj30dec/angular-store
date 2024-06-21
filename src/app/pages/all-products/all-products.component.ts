@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterRenderPhase, Component, OnDestroy, OnInit, } from '@angular/core';
 import { HttpService } from '../../services/http.service';
 import { ProductModel } from '../../models/products.models';
 import { Subscription } from 'rxjs';
@@ -25,7 +25,8 @@ interface productType{
 })
 export class AllProductsComponent implements OnInit, OnDestroy {
   postSubscription!:Subscription;
-  constructor(private httpService:HttpService ){
+  constructor(private httpService:HttpService){
+  
   }
   isLoaded:boolean = false;
   allProducts:any = []

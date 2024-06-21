@@ -1,5 +1,5 @@
 import { Routes } from "@angular/router";
-import { OnInitComponent } from "./on-init/on-init.component";
+import { LifeCyclesComponent } from "./life-cycles/life-cycles.component";
 export const routesHooks: Routes = [
-    { path:'', component:OnInitComponent, title:"ngOnInit Life Cycle Hook"}
+    // { path:'', component:OnInitComponent, title:"ngOnInit Life Cycle Hook"}
 ]
